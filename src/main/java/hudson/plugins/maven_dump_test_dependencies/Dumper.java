@@ -53,7 +53,7 @@ public class Dumper extends MavenReporter {
                 String timestamp = new Date(l).toLocaleString();
                 if (Long.valueOf(l).equals(baseline.get(path)))
                     timestamp = "identical";
-                listener.getLogger().println("[HUDSON] "+ timestamp +" : "+path);
+                System.out.println("[HUDSON] "+ timestamp +" : "+path);
                 data.put(path,l);
             }
         } catch (DependencyResolutionRequiredException e) {
